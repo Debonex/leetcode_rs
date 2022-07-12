@@ -13,8 +13,8 @@ impl Solution {
         let (mut max_l, mut max_r, mut max_len) = (0, 0, 1);
         let mut flags = vec![vec![false; len]; len];
 
-        for i in 0..len {
-            flags[i][i] = true;
+        for (i, item) in flags.iter_mut().enumerate() {
+            item[i] = true;
         }
 
         for r_base in 1..len {
@@ -38,7 +38,7 @@ impl Solution {
 // @lc code=end
 
 #[test]
-fn test_5() {
+fn test_0005() {
     let s = "babad".to_string();
     assert_eq!(Solution::longest_palindrome(s), "bab".to_string());
 

@@ -23,7 +23,7 @@ impl Solution {
 // @lc code=end
 
 #[test]
-fn test_1() {
+fn test_0001() {
     let nums = vec![2, 7, 11, 15];
     let target = 9;
     assert_eq!(Solution::two_sum(nums, target), vec![0, 1]);

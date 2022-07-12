@@ -43,7 +43,7 @@ impl Solution {
 // @lc code=end
 
 #[test]
-fn test_4() {
+fn test_0004() {
     let (nums1, nums2) = (vec![1, 3], vec![2]);
     assert_eq!(Solution::find_median_sorted_arrays(nums1, nums2), 2.0);
 

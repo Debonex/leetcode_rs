@@ -44,7 +44,7 @@ impl Solution {
 // @lc code=end
 
 #[test]
-fn test_6() {
+fn test_0006() {
     let s = "PAYPALISHIRING".to_string();
     assert_eq!(Solution::convert(s, 3), "PAHNAPLSIIGYIR".to_string());
 

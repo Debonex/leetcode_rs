@@ -6,28 +6,29 @@
 
 use super::Solution;
 // @lc code=start
-
-const MIN: &'static [usize] = &[2, 1, 4, 7, 4, 8, 3, 6, 4, 8];
-const MAX: &'static [usize] = &[2, 1, 4, 7, 4, 8, 3, 6, 4, 7];
+use std::cmp::Ordering;
+const MIN: &[usize] = &[2, 1, 4, 7, 4, 8, 3, 6, 4, 8];
+const MAX: &[usize] = &[2, 1, 4, 7, 4, 8, 3, 6, 4, 7];
 
 impl Solution {
     fn overflow(nums: &[usize], positive: bool) -> bool {
         let nums_len = nums.len();
-        if nums_len < 10 {
-            return false;
-        } else if nums_len > 10 {
-            return true;
-        } else {
-            let nums_compare = if positive { MAX } else { MIN };
-            for i in 0..10 {
-                if nums[i] < nums_compare[i] {
-                    return false;
+
+        match nums_len.cmp(&10) {
+            Ordering::Less => false,
+            Ordering::Equal => {
+                let nums_compare = if positive { MAX } else { MIN };
+                for i in 0..10 {
+                    if nums[i] < nums_compare[i] {
+                        return false;
+                    }
+                    if nums[i] > nums_compare[i] {
+                        return true;
+                    }
                 }
-                if nums[i] > nums_compare[i] {
-                    return true;
-                }
+                false
             }
-            return false;
+            Ordering::Greater => true,
         }
     }
 
@@ -59,7 +60,7 @@ impl Solution {
 // @lc code=end
 
 #[test]
-fn test_7() {
+fn test_0007() {
     assert_eq!(Solution::reverse(123), 321);
     assert_eq!(Solution::reverse(-123), -321);
     assert_eq!(Solution::reverse(120), 21);

@@ -73,7 +73,7 @@ impl Solution {
 // @lc code=end
 
 #[test]
-fn test_2() {
+fn test_0002() {
     use crate::linked_list;
 
     let l1 = linked_list!(2, 4, 3);
