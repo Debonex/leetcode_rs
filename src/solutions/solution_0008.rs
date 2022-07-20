@@ -47,7 +47,7 @@ impl Solution {
         };
 
         for c in s.chars() {
-            if c.is_digit(10) {
+            if c.is_ascii_digit() {
                 nums.push(c as usize - '0' as usize);
             } else {
                 break;

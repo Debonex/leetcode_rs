@@ -38,7 +38,7 @@ impl Solution {
         let mut x = x;
 
         while x != 0 {
-            nums.push((x % 10).abs() as usize);
+            nums.push((x % 10).unsigned_abs() as usize);
             x /= 10;
         }
 
