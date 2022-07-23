@@ -47,8 +47,6 @@ impl Solution {
                     }
                 }
             }
-
-            println!("{} {}", i, res)
         }
         res
     }
