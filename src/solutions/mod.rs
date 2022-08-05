@@ -19,4 +19,7 @@ pub mod solution_0018;
 pub mod solution_0019;
 pub mod solution_0020;
 pub mod solution_0021;
+pub mod solution_0022;
+pub mod solution_0023;
+pub mod solution_0024;
 pub struct Solution {}
