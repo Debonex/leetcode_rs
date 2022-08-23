@@ -62,7 +62,7 @@ impl Solution {
 }
 // @lc code=end
 #[test]
-fn solution_0023() {
+fn test_0023() {
     use crate::linked_list;
     let lists = vec![
         linked_list!(1, 4, 5),
